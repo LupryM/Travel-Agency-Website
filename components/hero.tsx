@@ -18,7 +18,7 @@ const montserrat = Montserrat({
 
 export function Hero() {
   return (
-    <section className="relative pt-32 pb-24 min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#29B6F6] via-[#4FC3F7] via-[#B3E5FC] to-[#FDFBF7]">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#29B6F6] via-[#4FC3F7] via-[#B3E5FC] to-[#FDFBF7]">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -31,7 +31,7 @@ export function Hero() {
       </div>
 
       {/* Hero content */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto py-32">
         {/* MAIN HERO LINE — Changed to Dark Brown (#3E2723) to match Logo Text */}
         <h1
           className={`${dancingScript.className} text-5xl md:text-7xl lg:text-8xl text-[#3E2723] mb-4 leading-tight drop-shadow-sm`}

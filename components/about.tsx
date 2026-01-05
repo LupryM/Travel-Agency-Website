@@ -34,15 +34,70 @@ export function About() {
             <p className="text-primary/70 text-lg leading-relaxed">
               Founded on the principles of respect for nature and celebration of
               heritage, we invite you to walk the path of the ancestors with
-              modern comfort.
+              modern comfort. As locals born and raised in Limpopo, we don't
+              just show you tourist attractions—we share our home, our stories,
+              and our traditions.
             </p>
-            <div className="pt-4">
-              <button className="flex items-center gap-2 text-primary font-bold hover:text-forest-green transition-colors group">
-                Read Our Full Story
-                <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">
-                  arrow_forward
+            <p className="text-primary/70 text-lg leading-relaxed">
+              From the waterfalls of Venda to the warm hospitality of our
+              communities, every experience is crafted to be meaningful,
+              affordable, and authentic. We believe travel should transform you,
+              connect you, and leave a positive impact on the places you visit.
+            </p>
+
+            <div className="grid grid-cols-2 gap-4 pt-4">
+              <div className="flex items-start gap-3">
+                <span className="material-symbols-outlined text-teal-accent text-2xl">
+                  verified
                 </span>
-              </button>
+                <div>
+                  <h4 className="text-primary font-bold text-base mb-1">
+                    Local Expertise
+                  </h4>
+                  <p className="text-primary/60 text-sm">
+                    Born and raised in Limpopo
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="material-symbols-outlined text-teal-accent text-2xl">
+                  eco
+                </span>
+                <div>
+                  <h4 className="text-primary font-bold text-base mb-1">
+                    Sustainable Travel
+                  </h4>
+                  <p className="text-primary/60 text-sm">
+                    Respect for nature & culture
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="material-symbols-outlined text-teal-accent text-2xl">
+                  savings
+                </span>
+                <div>
+                  <h4 className="text-primary font-bold text-base mb-1">
+                    Great Value
+                  </h4>
+                  <p className="text-primary/60 text-sm">
+                    Quality experiences, fair prices
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="material-symbols-outlined text-teal-accent text-2xl">
+                  favorite
+                </span>
+                <div>
+                  <h4 className="text-primary font-bold text-base mb-1">
+                    Authentic Connections
+                  </h4>
+                  <p className="text-primary/60 text-sm">
+                    Real cultural exchanges
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
