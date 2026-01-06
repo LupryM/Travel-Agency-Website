@@ -5,9 +5,9 @@ import { useState } from "react";
 interface GalleryImage {
   src: string;
   alt: string;
-  title: string;
-  location?: string;
-  span?: string;
+  title: string; // Kept for accessibility/lightbox
+  location?: string; // Kept for lightbox display only
+  span?: string; // Used for Desktop layout only
 }
 
 const galleryImages: GalleryImage[] = [
@@ -16,7 +16,7 @@ const galleryImages: GalleryImage[] = [
     alt: "Silhouette of a large Baobab tree against a vibrant orange and purple African sunset",
     title: "Waterfall",
     location: "Limpopo",
-    span: "lg:col-span-2 lg:row-span-2",
+    span: "md:col-span-2 md:row-span-2",
   },
   {
     src: "/gallery/people.jpg",
@@ -33,133 +33,177 @@ const galleryImages: GalleryImage[] = [
     alt: "Turquoise ocean waves meeting golden sandy beach",
     title: "Maputo Eco Tourism Resort",
     location: "Coast",
-    span: "lg:col-span-2",
+    span: "md:col-span-2",
   },
   {
-    src: "/gallery/water.jpg",
-    alt: "Elephants roaming the African savanna",
-    title: "Wildlife Safari",
-    location: "Kruger",
+    src: "/gallery/fall.jpg",
+    alt: "Vibrant local market",
+    title: "Local Markets",
   },
   {
-    src: "/gallery/water.jpg",
-    alt: "Traditional African village",
-    title: "Cultural Heritage",
+    src: "/b.jpeg",
+    alt: "Vibrant local market",
+    title: "Local Markets",
   },
   {
-    src: "/mountain-hiking-trails-with-dramatic-views.jpg",
-    alt: "Dramatic mountain hiking trails",
-    title: "Mountain Adventures",
-    span: "lg:col-span-2",
+    src: "/group.jpeg",
+    alt: "Vibrant local market",
+    title: "Local Markets",
   },
   {
-    src: "/colorful-african-market-bustling-with-people.jpg",
+    src: "/c.jpeg",
+    alt: "Vibrant local market",
+    title: "Local Markets",
+  },
+  {
+    src: "/f.jpeg",
+    alt: "Vibrant local market",
+    title: "Local Markets",
+  },
+  {
+    src: "/d.jpeg",
     alt: "Vibrant local market",
     title: "Local Markets",
   },
 ];
 
 export function Gallery() {
-  const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
-  const [showFullGallery, setShowFullGallery] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
-  const displayedImages = showFullGallery
-    ? galleryImages
-    : galleryImages.slice(0, 4);
+  const handleNext = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (selectedIndex !== null) {
+      setSelectedIndex((prev) =>
+        prev === galleryImages.length - 1 ? 0 : (prev as number) + 1
+      );
+    }
+  };
+
+  const handlePrev = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (selectedIndex !== null) {
+      setSelectedIndex((prev) =>
+        prev === 0 ? galleryImages.length - 1 : (prev as number) - 1
+      );
+    }
+  };
+
+  const selectedImage =
+    selectedIndex !== null ? galleryImages[selectedIndex] : null;
 
   return (
     <>
-      <section className="py-20 px-4 md:px-10 bg-background-light" id="gallery">
+      <section
+        className="py-16 md:py-20 px-4 md:px-10 bg-background-light"
+        id="gallery"
+      >
         <div className="max-w-[1100px] mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-            <div className="max-w-2xl">
-              <h2 className="text-primary text-[32px] md:text-4xl font-bold leading-tight tracking-tight mb-4">
-                Captured Moments
-              </h2>
-              <p className="text-primary/70 text-lg">
-                A glimpse into the breathtaking landscapes and vibrant
-                experiences waiting for you.
-              </p>
-            </div>
-            <button
-              onClick={() => setShowFullGallery(!showFullGallery)}
-              className="hidden md:flex items-center gap-2 px-5 py-2.5 border border-primary/20 rounded-lg hover:bg-white hover:border-primary/40 transition-all font-medium text-primary"
-            >
-              {showFullGallery ? "Show Less" : "View Full Gallery"}
-              <span className="material-symbols-outlined text-[20px]">
-                grid_view
-              </span>
-            </button>
+          {/* Header Section */}
+          <div className="mb-8 md:mb-12">
+            <h2 className="text-primary text-[32px] md:text-4xl font-bold leading-tight tracking-tight mb-4">
+              Captured Moments
+            </h2>
+            <p className="text-primary/70 text-lg max-w-2xl">
+              A glimpse into the breathtaking landscapes and vibrant experiences
+              waiting for you.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[240px] md:auto-rows-[250px]">
-            {displayedImages.map((image, index) => (
+          {/* responsive container: 
+            Mobile: Flexbox with horizontal scroll (carousel)
+            Desktop: CSS Grid
+          */}
+          <div
+            className="
+            flex overflow-x-auto gap-4 pb-6 snap-x snap-mandatory scrollbar-hide
+            md:grid md:grid-cols-4 md:gap-4 md:auto-rows-[250px] md:overflow-visible md:pb-0
+          "
+          >
+            {galleryImages.map((image, index) => (
               <div
                 key={index}
-                className={`${
-                  image.span || ""
-                } rounded-xl overflow-hidden relative group cursor-pointer`}
-                onClick={() => setSelectedImage(image)}
+                onClick={() => setSelectedIndex(index)}
+                className={`
+                  /* Mobile Sizing: Fixed width blocks that snap */
+                  shrink-0 w-[85vw] h-[300px] snap-center 
+                  
+                  /* Desktop Sizing: Reset width/height and use grid */
+                  md:w-auto md:h-full md:col-span-1 
+                  ${image.span || ""} 
+                  
+                  /* Common Styling */
+                  rounded-xl overflow-hidden relative group cursor-pointer shadow-sm hover:shadow-md transition-all
+                `}
               >
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent z-10 opacity-80"></div>
-                <div className="absolute bottom-0 left-0 p-4 md:p-6 z-20 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                  {image.location && (
-                    <span className="text-teal-accent text-xs font-bold uppercase tracking-wider mb-2 block">
-                      {image.location}
-                    </span>
-                  )}
-                  <h3 className="text-white text-lg md:text-xl font-bold">
-                    {image.title}
-                  </h3>
-                </div>
+                {/* Image Container - No Text Overlay */}
                 <div
                   className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                   style={{ backgroundImage: `url("${image.src}")` }}
                   role="img"
                   aria-label={image.alt}
-                ></div>
+                />
               </div>
             ))}
           </div>
 
-          {!showFullGallery && (
-            <button
-              onClick={() => setShowFullGallery(true)}
-              className="md:hidden mt-6 w-full flex items-center justify-center gap-2 px-5 py-3 border border-primary/20 rounded-lg hover:bg-white hover:border-primary/40 transition-all font-medium text-primary"
-            >
-              View Full Gallery
-              <span className="material-symbols-outlined text-[20px]">
-                grid_view
-              </span>
-            </button>
-          )}
+          {/* Mobile Hint (Optional: Shows user they can scroll) */}
+          <p className="md:hidden text-center text-sm text-primary/40 mt-2 font-medium">
+            Swipe to explore gallery &rarr;
+          </p>
         </div>
       </section>
 
+      {/* Lightbox / Modal */}
       {selectedImage && (
         <div
-          className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4"
-          onClick={() => setSelectedImage(null)}
+          className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4 backdrop-blur-sm"
+          onClick={() => setSelectedIndex(null)}
         >
           <button
-            className="absolute top-4 right-4 text-white hover:text-teal-accent transition-colors"
-            onClick={() => setSelectedImage(null)}
+            className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors z-50 p-2"
+            onClick={() => setSelectedIndex(null)}
           >
             <span className="material-symbols-outlined text-4xl">close</span>
           </button>
-          <div className="max-w-6xl w-full max-h-[90vh] flex flex-col items-center gap-4">
+
+          {/* Previous Button */}
+          <button
+            onClick={handlePrev}
+            className="absolute left-2 md:left-8 top-1/2 -translate-y-1/2 text-white/50 hover:text-white transition-colors p-2 z-50 hover:bg-white/10 rounded-full"
+          >
+            <span className="material-symbols-outlined text-4xl md:text-5xl">
+              chevron_left
+            </span>
+          </button>
+
+          {/* Next Button */}
+          <button
+            onClick={handleNext}
+            className="absolute right-2 md:right-8 top-1/2 -translate-y-1/2 text-white/50 hover:text-white transition-colors p-2 z-50 hover:bg-white/10 rounded-full"
+          >
+            <span className="material-symbols-outlined text-4xl md:text-5xl">
+              chevron_right
+            </span>
+          </button>
+
+          <div
+            className="max-w-6xl w-full max-h-[90vh] flex flex-col items-center gap-4 relative"
+            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking content
+          >
             <img
               src={selectedImage.src || "/placeholder.svg"}
               alt={selectedImage.alt}
-              className="max-w-full max-h-[80vh] object-contain rounded-lg"
+              className="max-w-full max-h-[75vh] object-contain rounded-md shadow-2xl"
             />
+
+            {/* Title is only shown in the lightbox now */}
             <div className="text-center">
               {selectedImage.location && (
-                <span className="text-teal-accent text-sm font-bold uppercase tracking-wider mb-2 block">
+                <span className="text-teal-accent text-xs font-bold uppercase tracking-wider mb-1 block">
                   {selectedImage.location}
                 </span>
               )}
-              <h3 className="text-white text-2xl font-bold">
+              <h3 className="text-white text-xl font-bold">
                 {selectedImage.title}
               </h3>
             </div>
