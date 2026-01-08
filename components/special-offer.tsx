@@ -130,26 +130,13 @@ export function SpecialOffer() {
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
                   className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1DA851] text-white px-6 py-3.5 rounded-lg font-bold transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 w-full sm:w-auto"
-                  href="https://wa.me/27638060158"
+                  href="https://wa.me/27840228948"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <span className="material-symbols-outlined">chat</span>
-                  063 806 0158
+                  084 022 8948
                 </Link>
-                <Link
-                  className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1DA851] text-white px-6 py-3.5 rounded-lg font-bold transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 w-full sm:w-auto"
-                  href="https://wa.me/27651623847"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className="material-symbols-outlined">chat</span>
-                  065 162 3847
-                </Link>
-              </div>
-              <div className="text-center mt-4 text-sm text-primary/70 font-medium">
-                Alternative Contact:{" "}
-                <span className="text-primary font-bold">073 397 3315</span>
               </div>
             </div>
           </div>

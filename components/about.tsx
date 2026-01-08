@@ -36,14 +36,7 @@ export function About() {
               heritage, we invite you to walk the path of the ancestors with
               modern comfort.
             </p>
-            <div className="pt-4">
-              <button className="flex items-center gap-2 text-primary font-bold hover:text-forest-green transition-colors group">
-                Read Our Full Story
-                <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">
-                  arrow_forward
-                </span>
-              </button>
-            </div>
+            <div className="pt-4"></div>
           </div>
         </div>
       </div>
