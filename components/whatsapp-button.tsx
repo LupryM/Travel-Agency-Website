@@ -5,7 +5,7 @@ import { useState } from "react";
 export function WhatsAppButton() {
   const [isHovered, setIsHovered] = useState(false);
 
-  const whatsappNumber = "27123456789"; // Format: country code + number without +
+  const whatsappNumber = "27840228948"; // Format: country code + number without +
   const message = encodeURIComponent(
     "Hi! I'm interested in learning more about your travel packages."
   );
