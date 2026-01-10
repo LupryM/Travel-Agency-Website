@@ -29,15 +29,15 @@ export const Services: React.FC = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 text-forest-green font-bold text-sm tracking-wider uppercase mb-4">
             <span className="w-8 h-[2px] bg-forest-green"></span>
-            Our Services
+            What's Included on Every Adventure
           </div>
           <h2 className="text-primary text-4xl md:text-5xl font-black leading-tight tracking-tight mb-6">
-            Authentic Limpopo Journeys
+            Everything We Curate for You
           </h2>
           <p className="max-w-2xl mx-auto text-primary/70 text-lg leading-relaxed">
-            Discover the soul of South Africa through local tours, cultural
-            immersion, and adventures that connect you with authentic
-            experiences.
+            Each journey is thoughtfully designed to combine authentic local
+            experiences, cultural connections, and adventure, all in one
+            unforgettable group trip.
           </p>
         </div>
 
@@ -48,10 +48,10 @@ export const Services: React.FC = () => {
             <div
               style={{
                 backgroundImage: `url("/gallery/water.jpg")`,
-                backgroundSize: "cover", // optional: makes the image cover the div
-                backgroundPosition: "center", // optional: centers the image
-                width: "100%", // optional: define width
-                height: "400px", // optional: define height
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                width: "100%",
+                height: "400px",
               }}
             ></div>
 
@@ -61,15 +61,15 @@ export const Services: React.FC = () => {
                   explore
                 </span>
                 <span className="text-xs font-bold tracking-widest uppercase">
-                  Signature Experience
+                  Group Adventure Highlight
                 </span>
               </div>
               <h3 className="text-3xl md:text-4xl font-extrabold text-white mb-2">
                 Local Tours
               </h3>
               <p className="text-white/90 text-base max-w-lg opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                Explore hidden gems from Mapate Eco-Tourism Resort to sacred
-                Venda sites beyond the tourist trail.
+                Join us as we explore hidden gems from Mapate Eco-Tourism Resort
+                to sacred Venda sites with our knowledgeable local guides.
               </p>
             </div>
           </div>
@@ -93,8 +93,9 @@ export const Services: React.FC = () => {
                 Local Food Tours
               </h3>
               <p className="text-white/90 text-sm leading-relaxed">
-                Taste authentic flavors and culinary heritage through local
-                markets and traditional home-cooked meals.
+                Share meals, stories, and authentic flavors with fellow
+                travelers as you taste culinary heritage through local markets
+                and traditional home-cooked meals.
               </p>
             </div>
           </div>
@@ -110,7 +111,7 @@ export const Services: React.FC = () => {
                   }}
                 ></div>
                 <div className="absolute top-3 right-3 bg-teal-accent text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-md z-20">
-                  Best Value
+                  Comfortable & Welcoming
                 </div>
               </div>
               <div className="p-6 flex-grow flex flex-col justify-center">
@@ -119,12 +120,13 @@ export const Services: React.FC = () => {
                     bed
                   </span>
                   <h3 className="font-extrabold text-xl text-primary">
-                    Affordable Stays
+                    Comfortable Group Stays
                   </h3>
                 </div>
                 <p className="text-primary/70 text-sm leading-relaxed">
-                  Comfortable lodges and guesthouses that won't break the bank,
-                  carefully selected for quality.
+                  Thoughtfully selected lodges and guesthouses where you'll stay
+                  with fellow adventurers, foster connections, and experience
+                  warm South African hospitality.
                 </p>
               </div>
             </div>
@@ -148,7 +150,8 @@ export const Services: React.FC = () => {
                 Cultural Experiences
               </h3>
               <p className="text-white/90 text-sm max-w-xs leading-relaxed">
-                Connect with living traditions and the heritage soul of Limpopo.
+                Experience living traditions together with our group, connecting
+                with the heritage soul of Limpopo and each other.
               </p>
             </div>
           </div>
@@ -165,7 +168,7 @@ export const Services: React.FC = () => {
             ></div>
             <div className="absolute inset-0 p-8 z-20 flex flex-col justify-center">
               <span className="bg-teal-accent text-white text-xs font-bold px-3 py-1.5 rounded-full mb-4 inline-block self-start shadow-md uppercase tracking-wide">
-                Thrills
+                Join the Adventure
               </span>
               <h3 className="text-3xl md:text-4xl font-extrabold text-white mb-3">
                 Adventure Activities
@@ -201,15 +204,16 @@ export const Services: React.FC = () => {
                     groups
                   </span>
                   <span className="text-xs font-bold uppercase tracking-wide">
-                    Group Tours
+                    Our Community
                   </span>
                 </div>
                 <h3 className="text-xl md:text-2xl font-extrabold mb-2 text-white">
                   Better Together
                 </h3>
                 <p className="text-white/80 text-sm leading-relaxed">
-                  Retreats, family reunions, or friends' getaways showcasing the
-                  best of Limpopo.
+                  Retreats, family reunions, and friends' getaways where you
+                  experience the best of Limpopo while forming lasting
+                  connections with fellow travelers.
                 </p>
               </div>
             </div>

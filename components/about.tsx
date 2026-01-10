@@ -23,18 +23,21 @@ export function About() {
               About Us
             </div>
             <h2 className="text-primary text-4xl font-black leading-tight tracking-tight">
-              Showcasing the Essence of South Africa
+              {}
+              Creating Shared Adventures in South Africa
             </h2>
             <p className="text-primary/70 text-lg leading-relaxed">
-              Ndila Ya Vhupo Travels is dedicated to showcasing the true essence
-              of South Africa. Our mission is to provide authentic, sustainable,
-              and unforgettable travel experiences that connect you with the
-              land and its people.
+              Ndila Ya Vhupo Travels brings people together through authentic
+              group journeys that celebrate the true essence of South Africa. We
+              believe the best travel experiences are shared, where connections
+              with the land, the people, and fellow adventurers last a lifetime.
             </p>
             <p className="text-primary/70 text-lg leading-relaxed">
-              Founded on the principles of respect for nature and celebration of
-              heritage, we invite you to walk the path of the ancestors with
-              modern comfort.
+              {}
+              Founded on the principles of respect for nature, celebration of
+              heritage, and the power of shared experiences, we invite you to
+              walk the path of the ancestors with modern comfort, together with
+              people who share your sense of adventure.
             </p>
             <div className="pt-4"></div>
           </div>

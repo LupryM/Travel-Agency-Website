@@ -20,9 +20,10 @@ export function Newsletter() {
         style={{ backgroundImage: "radial-gradient(#ffffff 1px, transparent 1px)", backgroundSize: "20px 20px" }}
       ></div>
       <div className="max-w-[800px] mx-auto text-center relative z-10">
-        <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">Ready for your next adventure?</h2>
+        <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">Never Miss an Upcoming Adventure</h2>
         <p className="text-white/80 text-lg mb-10">
-          Sign up for our newsletter to receive exclusive offers and travel inspiration directly to your inbox.
+          Join our community and be the first to hear about new group trips, exclusive member-only adventures, and
+          special announcements straight to your inbox.
         </p>
         <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
           <input
@@ -37,7 +38,7 @@ export function Newsletter() {
             className="h-12 px-8 rounded-lg bg-earthy-beige text-primary font-bold hover:bg-white transition-colors"
             type="submit"
           >
-            Subscribe
+            Notify Me
           </button>
         </form>
       </div>
