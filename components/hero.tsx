@@ -60,7 +60,7 @@ export function Hero() {
           >
             {/* Button is now GREEN (like the Tree), Hover is BROWN */}
             <span className="material-symbols-outlined">flight_takeoff</span>
-            Book Your Adventure
+            Join our next trip
           </Link>
 
           <Link
