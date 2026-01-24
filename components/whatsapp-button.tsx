@@ -1,10 +1,6 @@
 "use client";
 
-import { useState } from "react";
-
 export function WhatsAppButton() {
-  const [isHovered, setIsHovered] = useState(false);
-
   const whatsappNumber = "27840228948"; // Format: country code + number without +
   const message = encodeURIComponent(
     "Hi! I'm interested in learning more about your travel packages."
@@ -15,9 +11,7 @@ export function WhatsAppButton() {
       href={`https://wa.me/${whatsappNumber}?text=${message}`}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full p-4 shadow-2xl transition-all duration-300 flex items-center gap-3 group"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full p-4 shadow-2xl transition-all duration-300"
       aria-label="Chat on WhatsApp"
     >
       <svg
@@ -27,8 +21,6 @@ export function WhatsAppButton() {
       >
         <path d="M16 .396C7.164.396 0 7.56 0 16.396c0 2.89.754 5.708 2.188 8.195L0 32l7.61-2.145a15.93 15.93 0 008.39 2.34h.004c8.836 0 16-7.164 16-16S24.836.396 16 .396zm0 29.13a13.17 13.17 0 01-6.703-1.84l-.48-.285-4.52 1.273 1.29-4.41-.312-.498a13.14 13.14 0 01-2.016-6.97C3.259 9.3 9.303 3.26 16 3.26c3.22 0 6.245 1.25 8.523 3.53a11.96 11.96 0 013.52 8.523c0 6.698-6.04 12.743-12.743 12.743zm7.013-9.585c-.38-.19-2.24-1.105-2.586-1.23-.347-.125-.6-.19-.85.19-.25.38-.975 1.23-1.195 1.48-.22.25-.44.28-.82.095-.38-.19-1.605-.59-3.055-1.88-1.13-1.01-1.89-2.26-2.11-2.64-.22-.38-.024-.59.165-.78.17-.17.38-.44.57-.66.19-.22.25-.38.38-.63.125-.25.065-.47-.03-.66-.095-.19-.85-2.055-1.165-2.81-.31-.75-.63-.65-.85-.66-.22-.01-.47-.01-.72-.01-.25 0-.66.095-1.005.47-.345.38-1.32 1.29-1.32 3.15 0 1.86 1.345 3.66 1.53 3.91.19.25 2.65 4.06 6.42 5.7.9.39 1.6.62 2.145.795.905.29 1.73.25 2.38.15.725-.11 2.24-.915 2.555-1.795.315-.88.315-1.64.22-1.795-.095-.155-.345-.25-.725-.44z" />
       </svg>
-
-
     </a>
   );
 }
