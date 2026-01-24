@@ -66,7 +66,8 @@ export function Header() {
             )
           )}
 
-          <button
+          <Link
+            href="#newsletter"
             className={`font-bold uppercase tracking-wide px-6 py-2 transition-all duration-300 shadow-md border-2 rounded-full ${
               isScrolled
                 ? "bg-[#4A7C59] text-white border-[#4A7C59] hover:bg-[#3E2723] hover:border-[#3E2723]"
@@ -74,7 +75,7 @@ export function Header() {
             }`}
           >
             Contact
-          </button>
+          </Link>
         </nav>
 
         {/* MOBILE MENU BUTTON */}
@@ -140,9 +141,9 @@ export function Header() {
           </Link>
         ))}
 
-        <button className="bg-[#4A7C59] text-white px-10 py-3 rounded-full font-bold uppercase tracking-wide shadow-lg mt-4 hover:bg-[#3E2723] transition-colors">
+        <Link href="#newsletter" onClick={() => setMobileMenuOpen(false)} className="bg-[#4A7C59] text-white px-10 py-3 rounded-full font-bold uppercase tracking-wide shadow-lg mt-4 hover:bg-[#3E2723] transition-colors">
           Contact
-        </button>
+        </Link>
       </div>
     </header>
   );
