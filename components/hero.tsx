@@ -36,7 +36,7 @@ export function Hero() {
         <h1
           className={`${dancingScript.className} text-5xl md:text-7xl lg:text-8xl text-[#3E2723] mb-4 leading-tight drop-shadow-sm`}
         >
-          Discover Different Cultures
+          Group Trips from Thohoyandou
         </h1>
 
         {/* Supporting text — Dark Brown for warmth and readability */}

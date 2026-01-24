@@ -32,7 +32,7 @@ export const Services: React.FC = () => {
             What's Included on Every Adventure
           </div>
           <h2 className="text-primary text-4xl md:text-5xl font-black leading-tight tracking-tight mb-6">
-            Everything We Curate for You
+            Our Travel Services & Group Packages
           </h2>
           <p className="max-w-2xl mx-auto text-primary/70 text-lg leading-relaxed">
             Each journey is thoughtfully designed to combine authentic local

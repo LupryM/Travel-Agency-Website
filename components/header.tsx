@@ -51,6 +51,8 @@ export function Header() {
                 href={
                   item === "Home"
                     ? "/"
+                    : item === "Upcoming Trip"
+                    ? "#special-offer"
                     : `#${item.toLowerCase().replace(" ", "-")}`
                 }
                 className={`text-sm font-bold uppercase tracking-widest transition-colors duration-300 ${
@@ -125,7 +127,11 @@ export function Header() {
           <Link
             key={item}
             href={
-              item === "Home" ? "/" : `#${item.toLowerCase().replace(" ", "-")}`
+              item === "Home"
+                ? "/"
+                : item === "Upcoming Trip"
+                ? "#special-offer"
+                : `#${item.toLowerCase().replace(" ", "-")}`
             }
             onClick={() => setMobileMenuOpen(false)}
             className="text-[#3E2723] text-xl font-bold uppercase tracking-widest hover:text-[#4A7C59] transition-colors"

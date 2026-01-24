@@ -27,9 +27,9 @@ const dancingScript = Dancing_Script({
 });
 
 export const metadata: Metadata = {
-  title: "Ndila Ya Vhupo Travels - Authentic South African Travel Experiences",
+  title: "Travel Agency in Thohoyandou | Group Trips from Venda | Ndila Ya Vhupo",
   description:
-    "Experience the authentic soul of South Africa through curated journeys that connect you with the land and its people.",
+    "Looking for group trips in Venda? Ndila Ya Vhupo Travels organizes affordable tours and holiday packages departing from Thohoyandou. Book your next adventure today!",
   generator: "v0.app",
   icons: {
     icon: [

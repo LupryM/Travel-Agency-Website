@@ -60,40 +60,39 @@ export function Footer() {
           <h4 className="text-lg font-bold">Company</h4>
           <ul className="flex flex-col gap-2 text-sm text-white/70">
             <li>
-              <Link className="hover:text-white transition-colors" href="#">
+              <Link className="hover:text-white transition-colors" href="#about">
                 About Us
               </Link>
             </li>
-
             <li>
-              <Link className="hover:text-white transition-colors" href="#">
-                Privacy Policy
+              <Link className="hover:text-white transition-colors" href="#services">
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link className="hover:text-white transition-colors" href="#gallery">
+                Gallery
               </Link>
             </li>
           </ul>
         </div>
 
         <div className="flex flex-col gap-4">
-          <h4 className="text-lg font-bold">Destinations</h4>
+          <h4 className="text-lg font-bold">Quick Links</h4>
           <ul className="flex flex-col gap-2 text-sm text-white/70">
             <li>
-              <Link className="hover:text-white transition-colors" href="#">
-                Kruger National Park
+              <Link className="hover:text-white transition-colors" href="#special-offer">
+                Upcoming Trip
               </Link>
             </li>
             <li>
-              <Link className="hover:text-white transition-colors" href="#">
-                Cape Town
+              <Link className="hover:text-white transition-colors" href="#testimonials">
+                Testimonials
               </Link>
             </li>
             <li>
-              <Link className="hover:text-white transition-colors" href="#">
-                Garden Route
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:text-white transition-colors" href="#">
-                Drakensberg
+              <Link className="hover:text-white transition-colors" href="#newsletter">
+                Newsletter
               </Link>
             </li>
           </ul>

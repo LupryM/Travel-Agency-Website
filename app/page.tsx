@@ -1,5 +1,6 @@
 import { Header } from "@/components/header";
 import { Hero } from "@/components/hero";
+import { Intro } from "@/components/intro";
 import { SpecialOffer } from "@/components/special-offer";
 import { Services } from "@/components/services";
 import { About } from "@/components/about";
@@ -14,6 +15,7 @@ export default function HomePage() {
     <div className="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
       <Header />
       <Hero />
+      <Intro />
       <SpecialOffer />
       <About />
       <Services />

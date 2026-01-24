@@ -23,23 +23,23 @@ export function About() {
               About Us
             </div>
             <h2 className="text-primary text-4xl font-black leading-tight tracking-tight">
-              {}
-              Creating Shared Adventures in South Africa
+              About Ndila Ya Vhupo Travels Connecting People Through the Beauty of Venda and Beyond.
             </h2>
             <p className="text-primary/70 text-lg leading-relaxed">
-              Ndila Ya Vhupo Travels brings people together through authentic
-              group journeys that celebrate the true essence of South Africa. We
-              believe the best travel experiences are shared, where connections
-              with the land, the people, and fellow adventurers last a lifetime.
+              Based right here in Thohoyandou, Ndila Ya Vhupo Travels was founded on a simple belief: travel is better when it’s shared. We noticed that many people in Venda want to explore the beauty of Limpopo and South Africa but don't want the stress of driving long distances or planning complex itineraries alone.
             </p>
             <p className="text-primary/70 text-lg leading-relaxed">
-              {}
-              Founded on the principles of respect for nature, celebration of
-              heritage, and the power of shared experiences, we invite you to
-              walk the path of the ancestors with modern comfort, together with
-              people who share your sense of adventure.
+              That is where we come in. We are more than just a tour operator; we are community builders. We curate authentic group journeys that celebrate our heritage, respect nature, and foster friendship.
             </p>
-            <div className="pt-4"></div>
+            <div className="pt-4">
+              <h3 className="text-primary text-2xl font-bold mb-4">Why Choose Us?</h3>
+              <ul className="text-primary/70 text-lg leading-relaxed list-disc list-inside space-y-2">
+                <li>Locally Based: We operate out of Thohoyandou and understand the needs of our local community.</li>
+                <li>Hassle-Free Planning: We manage the transport, meals, and bookings.</li>
+                <li>Safety & Comfort: We partner with trusted transport providers and lodges.</li>
+                <li>Cultural Pride: Our trips often feature deep dives into Venda culture and history.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
